@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio Dev de Games</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {}
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900 transition-colors duration-500">
+
+  <!-- Botão de tema -->
+  <button id="themeToggle"
+    class="fixed top-5 right-5 z-50 p-3 backdrop-blur-md bg-white/10 dark:bg-black/10 hover:bg-white/20 dark:hover:bg-black/20 rounded-xl transition">
+    <i data-lucide="sun"></i>
+  </button>
+
+  <!-- HERO -->
+  <section id="hero" class="relative h-screen overflow-hidden">
+
+    <video autoplay muted loop playsinline
+      class="absolute inset-0 w-full h-full object-cover opacity-70 transition-transform duration-300">
+      <source src="Video Project.mp4" type="video/mp4">
+    </video>
+
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black dark:from-white/40 dark:to-white"></div>
+
+    <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-6">
+      <h1 class="text-5xl font-bold dark:text-neutral-900 drop-shadow-lg">Gustavo – Game Developer</h1>
+      <p class="mt-4 text-xl opacity-90 dark:opacity-70">
+        Criando mundos, lógicas e histórias jogáveis.
+      </p>
+
+      <a href="#projetos"
+        class="mt-8 px-8 py-3 rounded-xl backdrop-blur-md bg-white/10 dark:bg-black/10 hover:bg-white/20 dark:hover:bg-black/20 transition font-semibold">
+        Ver Projetos
+      </a>
+    </div>
+
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="relative z-20 py-20 px-6 max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold mb-6">Sobre Mim</h2>
+
+    <div class="bg-white/10 dark:bg-black/10 backdrop-blur-md p-6 rounded-2xl shadow-xl">
+      <p>
+        Sou desenvolvedor de jogos com foco em experiências criativas e mecânicas envolventes,
+        trabalhando com Unity, C#, JavaScript e arte digital.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="relative z-20 py-20 px-6">
+    <h2 class="text-4xl font-bold text-center mb-10">Projetos</h2>
+
+    <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+
+      <!-- Card 1 -->
+      <div class="bg-white/10 dark:bg-black/10 backdrop-blur-md p-5 rounded-2xl shadow-xl">
+
+        <h3 class="text-2xl font-semibold mb-4">Project Factory</h3>
+
+        <div class="relative overflow-hidden rounded-xl group">
+
+          <!-- Track -->
+          <div class="flex transition-transform duration-500" id="carousel1">
+            <img src="src/img/PF1.png" class="w-full object-cover group-hover:scale-105 transition" />
+            <img src="src/img/PF2.png" class="w-full object-cover group-hover:scale-105 transition" />
+            <img src="src/img/PF3.png" class="w-full object-cover group-hover:scale-105 transition" />
+            <img src="src/img/PF4.png" class="w-full object-cover group-hover:scale-105 transition" />
+            <img src="src/img/PF5.png" class="w-full object-cover group-hover:scale-105 transition" />
+          </div>
+
+          <!-- Botões -->
+          <button class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 p-2 rounded-full"
+            onclick="prevSlide('carousel1')">
+            <i data-lucide="chevron-left"></i>
+          </button>
+
+          <button class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 p-2 rounded-full"
+            onclick="nextSlide('carousel1')">
+            <i data-lucide="chevron-right"></i>
+          </button>
+
+        </div>
+
+
+        <p class="mt-4 opacity-90 dark:opacity-70">
+          No Project Factory você devera montar uma fabrica e fabricar itens.
+          Faça pesquisas para liberar novas receitas e maquinas. Expanda sua fabrica.
+        </p>
+
+      </div>
+
+      <!-- Card 2 -->
+
+      <div class="bg-white/10 dark:bg-black/10 backdrop-blur-md p-5 rounded-2xl shadow-xl">
+
+        <h3 class="text-2xl font-semibold mb-4">CUBE.Sys</h3>
+
+        <div class="relative overflow-hidden rounded-xl group">
+
+          <!-- Track -->
+          <div class="flex transition-transform duration-500" id="carousel2">
+            <img src="src/img/CS1.png" class="w-full object-cover group-hover:scale-105 transition" />
+            <img src="src/img/CS2.png" class="w-full object-cover group-hover:scale-105 transition" />
+            <img src="src/img/CS3.png" class="w-full object-cover group-hover:scale-105 transition" />
+          </div>
+
+          <!-- Botões -->
+          <button class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 p-2 rounded-full"
+            onclick="prevSlide('carousel2')">
+            <i data-lucide="chevron-left"></i>
+          </button>
+
+          <button class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 p-2 rounded-full"
+            onclick="nextSlide('carousel2')">
+            <i data-lucide="chevron-right"></i>
+          </button>
+
+        </div>
+
+        <p class="mt-4 opacity-90 dark:opacity-70">
+          Cube Sys: combine as setas coloridas com suas cores e as formas geométricas
+          com suas respectivas formas para marcar o máximo de pontos possível.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="relative z-20 py-20 px-6 text-center">
+    <h2 class="text-4xl font-bold mb-4">Contato</h2>
+    <p class="mb-6 opacity-80 dark:opacity-60">Quer conversar sobre um projeto ou ideia?</p>
+
+    <a href="https://wa.me/5511948546194" target="_blank"
+      class="px-10 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl">
+      WhatsApp
+    </a>
+  </section>
+
+  <script src="script.js"></script>
+  <script> lucide.createIcons(); </script>
+</body>
+
+</html>
