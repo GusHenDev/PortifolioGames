@@ -39,6 +39,7 @@
     </video>
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black dark:from-white/40 dark:to-white"></div>
+    
 
     <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-6">
       <h1 class="text-5xl font-bold dark:text-neutral-900 drop-shadow-lg">Gustavo – Game Developer</h1>
@@ -140,6 +141,43 @@
         <p class="mt-4 opacity-90 dark:opacity-70">
           Cube Sys: combine as setas coloridas com suas cores e as formas geométricas
           com suas respectivas formas para marcar o máximo de pontos possível.
+        </p>
+
+      </div>
+
+      <div class="bg-white/10 dark:bg-black/10 backdrop-blur-md p-5 rounded-2xl shadow-xl">
+
+        <h3 class="text-2xl font-semibold mb-4">Outros Games</h3>
+
+        <div class="relative overflow-hidden rounded-xl group">
+
+          <!-- Track -->
+          <div class="flex transition-transform duration-500" id="carousel3">
+            <img src="src/img/O1.png" class="w-full object-cover group-hover:scale-105 transition" />
+            <img src="src/img/O2.png" class="w-full object-cover group-hover:scale-105 transition" />
+            <img src="src/img/O3.png" class="w-full object-cover group-hover:scale-105 transition" />
+            <img src="src/img/O4.png" class="w-full object-cover group-hover:scale-105 transition" />
+            <img src="src/img/O5.png" class="w-full object-cover group-hover:scale-105 transition" />
+            <img src="src/img/O6.png" class="w-full object-cover group-hover:scale-105 transition" />
+            <img src="src/img/O7.png" class="w-full object-cover group-hover:scale-105 transition" />
+          </div>
+
+          <!-- Botões -->
+          <button class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 p-2 rounded-full"
+            onclick="prevSlide('carousel3')">
+            <i data-lucide="chevron-left"></i>
+          </button>
+
+          <button class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 p-2 rounded-full"
+            onclick="nextSlide('carousel3')">
+            <i data-lucide="chevron-right"></i>
+          </button>
+
+        </div>
+
+        <p class="mt-4 opacity-90 dark:opacity-70">
+          Protótipos experimentais que uso para testar novas mecânicas e ideias. 
+          Pequenos laboratórios criativos que ajudam a refinar minhas habilidades como desenvolvedor.
         </p>
 
       </div>
